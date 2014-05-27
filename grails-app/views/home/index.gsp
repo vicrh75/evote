@@ -14,15 +14,15 @@
 				<g:form controller="voting" action="vote" class="form-horizontal"  enctype="multipart/form-data">
 					<fieldset class="form">
 						<div class="required">
-							<label for="voter" class="control-label">Voter Id<span class="required-indicator">*</span></label>
+							<label for="nif" class="control-label">Voter NIF<span class="required-indicator">*</span></label>
 							<div>
-								<g:textField class="form-control" name="voter" />
+								<g:textField class="form-control" name="nif" />
 							</div>
 						</div>
 						<div class="required">
 							<label for="party" class="control-label">Party<span class="required-indicator">*</span></label>
 							<div>
-								<g:select class="form-control" name="party" from="${kickstart._DemoPage$Suit?.values()}" keys="${kickstart._DemoPage$Suit.values()*.name()}" required="" value="${_DemoPageInstance?.myEnum?.name()}"/>
+								<g:select class="form-control" name="party" from="${evote.Party.list()}" optionKey="id" optionValue='name' required=""/>
 							</div>
 						</div>
 					</fieldset>

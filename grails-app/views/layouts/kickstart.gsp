@@ -43,7 +43,7 @@
 		<g:render template="/layouts/header"/>														
 	</g:else>
 
-	<g:render template="/layouts/content"/>														
+	<g:render template="/layouts/content" model="[layout_nomainmenu: true, layout_nosecondarymenu: true]"/>														
 
 	<!-- Enable to overwrite Footer by individual page -->
 	<g:if test="${ pageProperty(name:'page.footer') }">

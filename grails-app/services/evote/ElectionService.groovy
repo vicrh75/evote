@@ -6,7 +6,7 @@ package evote
  */
 class ElectionService {
 
-    def vote(String userId, String party) {
+    def vote(String nif, Long partyId) {
 
     }
 }

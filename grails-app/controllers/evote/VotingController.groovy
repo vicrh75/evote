@@ -8,9 +8,8 @@ class VotingController {
 	
 	def electionService
 
-	def vote() {
-		log.info("Voting")
-		electionService.vote(userId, partyName)
-		render(view:'thanks')
+	def vote(String nif, Long party) {
+		electionService.vote(nif, party)
+		render(view:'thanks', model:[userId: nif, partyId: party])
 	}
 }

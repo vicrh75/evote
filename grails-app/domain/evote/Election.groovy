@@ -13,7 +13,6 @@ class Election {
     }
 	
 	String name
-	static hasMany = [allowedVoters: Person]
-	//static hasMany = [votes: Vote]
+	static hasMany = [allowedVoters: Person, votes: Vote]
 
 }
