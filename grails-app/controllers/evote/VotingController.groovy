@@ -12,4 +12,17 @@ class VotingController {
 		electionService.vote(nif, party)
 		render(view:'thanks', model:[userId: nif, partyId: party])
 	}
+	
+	def startElection(String name) {
+		electionService.startElection(name)
+	}
+	
+	def endElection() {
+		electionService.endElection()	
+	}
+	
+	def showElectionResults() {
+		def results = electionService.electionResults()
+		render(model:[results: results])
+	}
 }
